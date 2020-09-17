@@ -1,21 +1,28 @@
+package oppgave1;
+
 import javax.swing.*;
 
 public class Sirkel {
     public static void main(String[] args){
 
-        double radius = Integer.parseInt(JOptionPane.showInputDialog("Radius:"));
+
+        double radius = Double.parseDouble(JOptionPane.showInputDialog("Radius:"));
 
         // Statisk metode som beregner og returnerer sirkelens diameter
         double diameter = 2*radius;
-        System.out.println("Diameteren er " + diameter);
+        String d = String.format("%.2f", diameter);
+        System.out.println("Diameteren av sirkelen med radius" + radius + " er " + d);
+
 
         // Statisk metode som beregner ot returnerer sirkelens omkrets
         double omkrets = radius * 2 * Math.PI;
-        System.out.println("Omkretsen er " + omkrets);
+        String o = String.format("%.2f", omkrets);
+        System.out.println("Omkretsen av srikelen med radius" + radius + " er " + o);
 
         // Statisk metode som beregner og returnerer sirkelens areal
         double areal = Math.PI * Math.pow(radius, 2);
-        System.out.println("Arealet er: " + areal);
+        String a = String.format("%.2f", areal);
+        System.out.println("Arealet av sirkelen med radius " + radius + " er " + a);
 
     }
 }
